@@ -107,6 +107,7 @@ class PostsController extends Controller
             $post->tag($tags);
         }
         $data = compact('post');
+        dd($data);
 
         return response()->json($data);
     }

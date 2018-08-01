@@ -28,6 +28,7 @@ Route::group(['middleware' => ['api'], 'as' => 'api.'], function () {
         || $origin == env('CLIENT_URL')) {
         // cors not working from middleware
         header('Access-Control-Allow-Origin:  *');
+        header('Access-Control-Allow-Headers: Authorization, Content-Type' );
         header('Access-Control-Allow-Methods:  POST, GET, OPTIONS, PATCH, PUT, DELETE');
         header('Access-Control-Allow-Headers:  Content-Type, X-Auth_old-Token, X-CSRF-Token, Origin, Authorization');
     }
